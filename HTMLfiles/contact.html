@@ -1,0 +1,140 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vacation - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'home/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/animate.css' %}">    
+    <link rel="stylesheet" href="{%static 'home/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/aos.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/style.css' %}">
+  </head>
+  <body>
+    {%include 'externals/nav.html' %}
+    <!-- END nav -->
+    
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>			
+		<section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row block-9">
+          <div class="col-md-12 d-flex">
+            <form method="POST" class="bg-light p-5 contact-form">
+              {%csrf_token%}
+              <div class="p-t-31 p-b-9">
+                {%for message in messages%}
+                <h3>{{message}}</h3>
+                {%endfor%}
+                <br>
+              </div>
+              <div class="form-group">
+                {{form}}
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+            <div class="col-md-6 d-flex">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15079.796169838255!2d72.8375414!3d19.1098913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0b9538d623ac5d2!2sMukesh%20Patel%20School%20Of%20Technology%20Management%20%26%20Engineering!5e0!3m2!1sen!2sin!4v1585473719392!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ftco-section ftco-no-pb contact-section">
+      <div class="container">
+        <div class="row d-flex contact-info">
+          <div class="col-md-3 d-flex">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-2">Address</h3>
+	            <p>MPSTME, Near Cooper Hospital, JVPD Scheme, Vile Parle West, Mumbai, Maharashtra 400056</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-2">Contact Number</h3>
+              <p><a href="tel://9769289257">+91 9769289257</a><br>
+                <a href="tel://9820607092">+91 9820607092</a><br>
+                <a href="tel://9823189368">+91 9823189368</a><br>
+                <a href="tel://9820813199">+91 9820813199</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-2">Email Address</h3>
+              <p><a href="mailto:meghaj.agrawal68@nmims.edu">meghaj.agrawal68@nmims.edu</a><br>
+                <a href="mailto:aastha.asher67@nmims.edu">aastha.asher67@nmims.edu</a><br>
+                <a href="mailto:nishant.desai@nmims.edu">nishant.desai@nmims.edu</a><br>
+                <a href="mailto:sakshi.chahande@nmims.edu">sakshi.chahande@nmims.edu</a></p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-2">Website</h3>
+	            <p><a href="{%url 'home'%}">StayCation.com</a></p>
+	          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {%include 'externals/footer.html' %}
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{%static 'home/js/jquery.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{%static 'home/js/popper.min.js' %}"></script>
+  <script src="{%static 'home/js/bootstrap.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{%static 'home/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.stellar.min.js' %}"></script>
+  <script src="{%static 'home/js/owl.carousel.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{%static 'home/js/aos.js' %}"></script>
+  <script src="{%static 'home/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{%static 'home/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{%static 'home/js/scrollax.min.js' %}"></script>
+  <script src="{%static 'home/js/google-map.js' %}"></script>
+  <script src="{%static 'home/js/main.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    
+  </body>
+</html>

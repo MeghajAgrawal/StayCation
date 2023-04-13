@@ -1,0 +1,292 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vacation - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="icon" type="image/png" href="{% static 'login/images/icons/favicon.ico'%}"/>
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/bootstrap/css/bootstrap.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animate/animate.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/css-hamburgers/hamburgers.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/animsition/css/animsition.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/select2/select2.min.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/vendor/daterangepicker/daterangepicker.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/css/util.css'%}">
+	  <link rel="stylesheet" type="text/css" href="{% static 'login/css/main.css'%}">
+
+
+    <link rel="stylesheet" href="{%static 'home/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/aos.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{%static 'home/css/style.css' %}">
+  </head>
+  <body>
+	{%include 'externals/nav.html' %}
+    <!-- END nav -->
+    
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Places to Stay</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Best Place Destination</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3 ftco-animate">
+        		<div class="project-destination">
+        			<a href="#" class="img" style="background-image: url(images/place-1.jpg);">
+        				<div class="text">
+        					<h3>Singapore</h3>
+        					<span>8 Tours</span>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<div class="project-destination">
+        			<a href="#" class="img" style="background-image: url(images/place-2.jpg);">
+        				<div class="text">
+        					<h3>Canada</h3>
+        					<span>2 Tours</span>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<div class="project-destination">
+        			<a href="#" class="img" style="background-image: url(images/place-3.jpg);">
+        				<div class="text">
+        					<h3>Thailand</h3>
+        					<span>5 Tours</span>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<div class="project-destination">
+        			<a href="#" class="img" style="background-image: url(images/place-4.jpg);">
+        				<div class="text">
+        					<h3>Autralia</h3>
+        					<span>5 Tours</span>
+        				</div>
+        			</a>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+-->
+<section class="ftco-section ftco-no-pb ftco-no-pt">
+	<div class="container">
+	 	<div class="row">
+			<div class="col-md-12">
+				<div class="search-wrap-1 ftco-animate p-4">
+					<form method="GET" action="search_place" class="search-property-1" enctype="multipart/form-data">
+		        		<div class="row">
+							<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        				<label for="#">Search by</label>
+		        				<div class="form-field">
+		          				<div class="select-wrap">
+		                      	<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      	<select name="search_by" id="" class="form-control" >
+		                        <option value="Name"style="color:#000">Name</option>
+		                        <option value="Addr"style="color:#000">Address Destination</option>
+		                      	</select>
+		                    	</div>
+				              	</div>
+			              		</div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Destination</label>
+		          				<div class="form-field">
+		          					<div class="icon"><span class="ion-ios-search"></span></div>
+				                <input type="text" class="form-control" placeholder="Search place" name="placename">
+				            	</div>
+			            		</div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Check-in date</label>
+		        					<div class="form-field">
+		          					<div class="icon"><span class="ion-ios-calendar"></span></div>
+				                	<input type="text" class="form-control checkin_date" placeholder="Check In Date" name="checkinDate">
+				              		</div>
+			              		</div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Check-out date</label>
+		        					<div class="form-field">
+		          					<div class="icon"><span class="ion-ios-calendar"></span></div>
+				                	<input type="text" class="form-control checkout_date" placeholder="Check Out Date" name="checkoutDate">
+				              		</div>
+			              		</div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        				<label for="#">Price Limit</label>
+		        				<div class="form-field">
+		          				<div class="select-wrap">
+		                      	<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      	<select name="price" id="" class="form-control" >
+								<option value="0"style="color:#000">Select option</option>
+								<option value="2500"style="color:#000">Rs.2,500</option>
+		                        <option value="5000"style="color:#000">Rs.5,000</option>
+		                        <option value="10000"style="color:#000">Rs.10,000</option>
+		                        <option value="50000"style="color:#000">Rs.50,000</option>
+		                        <option value="100000"style="color:#000">Rs.100,000</option>
+		                        <option value="200000"style="color:#000">Rs.200,000</option>
+		                        <option value="300000"style="color:#000">Rs.300,000</option>
+		                        <option value="400000"style="color:#000">Rs.400,000</option>
+		                        <option value="500000"style="color:#000">Rs.500,000</option>
+		                        <option value="600000"style="color:#000">Rs.600,000</option>
+		                        <option value="700000"style="color:#000">Rs.700,000</option>
+		                        <option value="800000"style="color:#000">Rs.800,000</option>
+		                        <option value="900000"style="color:#000">Rs.900,000</option>
+		                        <option value="1000000"style="color:#000">Rs.1,000,000</option>
+		                        <option value="2000000"style="color:#000">Rs.2,000,000</option>
+		                      	</select>
+		                    	</div>
+				              	</div>
+			              		</div>
+		        			</div>
+		        			<div class="col-lg align-self-end">
+		        				<div class="form-group">
+		        				<div class="form-field">
+				                <input type="submit" value="Search" class="form-control btn btn-primary">
+				              	</div>
+			              		</div>
+		        			</div>
+		        		</div>
+		        	</form>
+		        </div>
+			</div>
+	   	</div>
+	</div>
+</section>
+<br>
+    <section class="ftco-section ftco-no-pt">
+    	<div class="container">
+    		<div class="row justify-content-center pb-4">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Apartments available</h2>
+          </div>
+        </div>
+        <div class="row">
+			{%if places.count %}
+			{%for place in places%}
+        	<div class="col-md-4 ftco-animate">
+        		<div class="project-wrap">
+        			<a href="{%url 'place-detail' place.id %}" class="img" style="background-image: url({{place.img.url}});"></a>
+        			<div class="text p-4">
+						<span class="price">{{place.price}}/night</span>
+						<br>
+						{%if place.offer %}
+						<span class="days" style="font-size: larger;">Special Offer</span>
+						<br>
+						{%endif%}
+        				<span class="days">{{place.max_occupancy}} days</span>
+        				<h3><a href="{%url 'place-detail' place.id %}">{{place.title}}</a></h3>
+        				<p class="location"><span class="ion-ios-map"></span>{{place.address}}</p>
+        				<ul>
+        					<li><span class="flaticon-shower"></span>{{place.rooms}}</li>
+        					<li><span class="flaticon-king-size"></span>{{place.rooms}}</li>
+        				</ul>
+        			</div>
+        		</div>
+			</div>
+			{% endfor %}
+			{%else%}
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h3 class="mb-4">Sorry no places to display</h3>
+              </div>
+            <div class="container-login100-form-btn m-t-17">
+                <a class="login100-form-btn" href="{%url 'home' %}">
+                    Back home
+                </a>
+            </div> 			
+            {%endif%}
+		</div>
+		{% if is_paginated %}
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+				{%if page_obj.has_previous %}
+				<li><a href="?page=1">&lt;&lt;</a></li>
+				<li><a href="?page={{page_obj.previous_page_number}}">&lt;</a></li>
+				{% endif %}
+
+				{% for num in page_obj.paginator.page_range %}
+				{%if page_obj.number == num %}
+				<li class="active"><span>{{num}}</span></li>
+				{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+				<li><a href="?page={{num}}">{{num}}</a></li>
+				{% endif %}
+				{% endfor %}
+
+				{%if page_obj.has_next %}
+				<li><a href="?page={{page_obj.next_page_number}}">&gt;</a></li>
+				<li><a href="?page={{page_obj.paginator.num_pages}}">&gt;&gt;</a></li>
+				{% endif %}
+              </ul>
+            </div>
+          </div>
+		</div>
+		{% endif %}
+    	</div>
+    </section>
+
+	{%include 'externals/footer.html' %}
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{%static 'home/js/jquery.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{%static 'home/js/popper.min.js' %}"></script>
+  <script src="{%static 'home/js/bootstrap.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{%static 'home/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.stellar.min.js' %}"></script>
+  <script src="{%static 'home/js/owl.carousel.min.js' %}"></script>
+  <script src="{%static 'home/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{%static 'home/js/aos.js' %}"></script>
+  <script src="{%static 'home/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{%static 'home/js/bootstrap-datepicker.js' %}"></script>
+  <script src="{%static 'home/js/scrollax.min.js' %}"></script>
+  <script src="{%static 'home/js/google-map.js' %}"></script>
+  <script src="{%static 'home/js/main.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    
+  </body>
+</html>
